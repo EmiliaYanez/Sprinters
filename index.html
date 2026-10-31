@@ -1,331 +1,663 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sistema de Gestión de Calidad</title>
-  <link rel="stylesheet" href="CSS/index.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sistema de Gestión de Calidad</title>
+<link rel="stylesheet" href="CSS/index.css">
+
 </head>
 <body>
 <div class="site-shell">
-  <header class="site-header">
-    <a class="brand" href="#inicio" aria-label="Sistema de Gestión de Calidad">
-      <img src="Imagenes/logoscrum.png" width="70psx" height="70px"/>
-      <span class="brand-name">Sistema de Gestión<br>de Calidad</span>
-    </a>
-  </header>
-  <div class="barra">
-    <a href="#inicio">Inicio</a>
-    <a href="#calidad">Calidad</a>
-    <a href="#fundamentos">Fundamentos</a>
-    <a href="#tecnicas">Técnicas de aseguramiento</a>
-    <a href="#herramientas">Herramientas</a>
-    <a href="#sdlc">Ciclo de vida</a>
-    <a href="#metodologias">Metodologías</a>
-    <a href="#recursos">Recursos</a>
+
+<header class="site-header">
+  <a class="brand" href="#/" aria-label="Sistema de Gestión de Calidad">
+    <span class="brand-mark"><img src="Imagenes/logoscrum.png" alt="Logo"></span>
+    <span class="brand-name">Sistema de Gestión<br>de Calidad</span>
+  </a>
+  <div class="header-actions">
+    <button class="icon-button search-button" id="btnSearch" aria-label="Abrir búsqueda" aria-expanded="false">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="14" cy="14" r="9"/><path d="m21 21 7 7"/></svg>
+    </button>
+    <button class="icon-button menu-button" id="btnMenu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuPanel">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-  <main>
-    <section class="hero page-anchor" id="inicio">
-      <div class="hero-copy">
-        <p class="kicker">Aprende · Mejora · Evoluciona</p>
-        <h1>Sistema de Gestión<br>de <em>Calidad</em></h1>
-        <p class="hero-intro">Un espacio para comprender cómo se construye software de calidad, desde sus fundamentos hasta los procesos y metodologías que utiliza la industria.</p>
-      </div>
-    </section>
-    <section class="content-section" id="contenido">
-      <div class="section-heading">
-        <p>Conocimiento esencial</p>
-        <h2>Nuestro contenido</h2>
-      </div>
-      <div class="card-grid">
-        <article class="content-card blue">
-          <span class="card-number">01</span>
-          <div>
-            <h3>Gestión de la Calidad del Software</h3>
-            <ul>
-              <li>Fundamentos</li>
-              <li>Técnicas de Aseguramiento de la Calidad</li>
-              <li>Herramientas de Calidad</li>
-            </ul>
-          </div>
-          <a href="#calidad">Ver más <span>→</span></a>
-        </article>
-        <article class="content-card lilac">
-          <span class="card-number">02</span>
-          <div>
-            <h3>Procesos de Desarrollo de Software</h3>
-            <ul>
-              <li>Ciclo de Vida del Software (SDLC)</li>
-              <li>Modelos tradicionales</li>
-              <li>Modelos iterativos</li>
-            </ul>
-          </div>
-          <a href="#sdlc">Ver más <span>→</span></a>
-        </article>
-        <article class="content-card mint">
-          <span class="card-number">03</span>
-          <div>
-            <h3>Metodologías Ágiles</h3>
-            <ul>
-              <li>Scrum</li>
-              <li>Kanban</li>
-              <li>XP · Extreme Programming</li>
-            </ul>
-          </div>
-          <a href="#metodologias">Ver más <span>→</span></a>
-        </article>
-        <article class="content-card peach">
-          <span class="card-number">04</span>
-          <div>
-            <h3>Recursos y Aprendizaje</h3>
-            <ul>
-              <li>Glosario</li>
-              <li>Preguntas frecuentes</li>
-              <li>Enlaces de interés</li>
-              <li>Ejercicios y casos prácticos</li>
-            </ul>
-          </div>
-          <a href="#recursos">Ver más <span>→</span></a>
-        </article>
-      </div>
-    </section>
+  <div class="search-panel" id="searchPanel">
+    <label for="siteSearch">¿Qué quieres aprender?</label>
+    <input id="siteSearch" type="search" placeholder="Buscar temas o recursos" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</header>
 
-    <section class="static-section page-anchor" id="calidad">
-      <p class="kicker">Calidad</p>
-      <h1>Gestión de la Calidad del Software</h1>
-      <p class="topic-intro">Conoce los fundamentos, las técnicas y las herramientas que permiten prevenir defectos y construir productos de software confiables.</p>
-      <div class="static-link-list">
-        <a href="#fundamentos">01 · Fundamentos <p>Conceptos clave, métricas y estándares ISO 9126/25000.</p></a>
-        <a href="#tecnicas">02 · Técnicas de Aseguramiento de la Calidad <p>Tipos, niveles y técnicas de pruebas de software.</p></a>
-        <a href="#herramientas">03 · Herramientas de Calidad <p>Gestión de pruebas, seguimiento de defectos y análisis de calidad.</p></a>
-      </div>
-    </section>
+<nav class="barra" id="barra"></nav>
 
-    <section class="static-section page-anchor" id="fundamentos">
-      <p class="kicker">Gestión de la calidad</p>
-      <h1>Fundamentos</h1>
-      <p class="topic-intro">La calidad de software es la capacidad de un producto para satisfacer necesidades explícitas e implícitas de manera confiable, eficiente y sostenible.</p>
-      <section class="learning-block"><p class="block-eyebrow">Conceptos clave de calidad</p><h2>La calidad se construye durante todo el proceso</h2>
-        <div class="concept-grid">
-          <article>
-            <span>01</span>
-            <h3>Calidad del producto</h3>
-            <p>Evalúa qué tan bien el software cumple su función y responde al usuario.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Calidad del proceso</h3>
-            <p>Ordena las prácticas que permiten prevenir defectos y mejorar resultados.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Calidad en uso</h3>
-            <p>Mide la efectividad, satisfacción y seguridad en un contexto real.</p>
-          </article>
-        </div>
-      </section>
-      <section class="learning-block metrics-block">
-        <p class="block-eyebrow">Métricas</p>
-        <h2>Indicadores para tomar decisiones</h2>
-        <ul>
-        <li>
-          <strong>Densidad de defectos</strong>
-          <span>Errores encontrados en relación con el tamaño del producto.</span>
-        </li>
-        <li>
-          <strong>Cobertura de pruebas</strong>
-          <span>Porcentaje del código o requisitos verificados mediante pruebas.</span>
-        </li>
-        <li>
-          <strong>Tiempo medio de reparación</strong>
-          <span>Rapidez con la que el equipo resuelve una falla detectada.</span>
-        </li>
-      </ul>
-    </section>
-      <section class="learning-block">
-        <p class="block-eyebrow">Estándares</p>
-        <h2>ISO 9126 e ISO 25000</h2>
-        <details class="static-details" open>
-          <summary>ISO 9126 · Modelo precursor de calidad</summary>
-          <p>Organiza la calidad en seis características: funcionalidad, fiabilidad, usabilidad, eficiencia, mantenibilidad y portabilidad.</p>
-        </details>
-        <details class="static-details">
-          <summary>ISO 25000 · Familia SQuaRE</summary>
-          <p>Integra requisitos, medición y evaluación de calidad. Amplía el modelo anterior con seguridad, compatibilidad y una visión actual de la calidad en uso.</p>
-        </details>
-      </section>
-    </section>
+<div class="menu-backdrop" id="backdrop"></div>
+<aside class="menu-panel" id="menuPanel" aria-hidden="true">
+  <div class="menu-panel-top"><p>Explora</p><span>Menú principal</span></div>
+  <nav id="menuNav" aria-label="Menú desplegable"></nav>
+  <div class="menu-note"><span>¿Tienes alguna duda?</span><a href="#/contacto">Escríbenos</a></div>
+</aside>
 
-    <section class="static-section page-anchor" id="tecnicas">
-      <p class="kicker">Gestión de la calidad</p>
-      <h1>Técnicas de Aseguramiento de la Calidad</h1>
-      <p class="topic-intro">Las pruebas de software ayudan a prevenir riesgos y comprobar que cada parte del sistema funciona como se espera. Abre cada tarjeta para conocer más.</p>
-      <div class="test-grid">
-        <details class="test-card static-details" open>
-          <summary>01 · Nivel — Pruebas unitarias</summary>
-          <p>Verifican componentes pequeños de forma aislada. Se ejecutan con rapidez y permiten detectar fallas en funciones, clases o módulos antes de integrarlos.</p>
-        </details>
-        <details class="test-card static-details">
-          <summary>02 · Nivel — Pruebas de integración</summary>
-          <p>Comprueban la comunicación entre módulos. Validan interfaces, flujo de datos y dependencias cuando dos o más componentes comienzan a trabajar juntos.</p>
-        </details>
-        <details class="test-card static-details">
-          <summary>03 · Nivel — Pruebas de sistema</summary>
-          <p>Evalúan el producto completo contra sus requisitos. Simulan escenarios reales de principio a fin en un entorno cercano al de producción.</p>
-        </details>
-        <details class="test-card static-details">
-          <summary>04 · Técnica — Caja negra</summary>
-          <p>Examina entradas y salidas sin mirar el código. Utiliza particiones de equivalencia, valores límite y casos de uso para comprobar el comportamiento observable.</p>
-        </details>
-        <details class="test-card static-details">
-          <summary>05 · Técnica — Caja blanca</summary>
-          <p>Analiza la estructura y los caminos internos. Diseña casos a partir del código para cubrir sentencias, decisiones, condiciones y recorridos lógicos.</p>
-        </details>
-      </div>
-    </section>
+<main id="app"></main>
 
-    <section class="static-section page-anchor" id="herramientas">
-      <p class="kicker">Gestión de la calidad</p>
-      <h1>Herramientas de Calidad</h1>
-      <p class="topic-intro">Las herramientas apoyan la gestión de pruebas, el seguimiento de defectos y el análisis automatizado.</p>
-      <div class="tools-grid">
-        <article>
-          <p>Defectos</p>
-          <h2>Jira</h2>
-          <div>Plataforma para registrar incidencias, asignar responsables y controlar cada error hasta su resolución.</div>
-        </article>
-        <article>
-          <p>Defectos</p>
-          <h2>Bugzilla</h2>
-          <div>Sistema especializado en documentar, clasificar y dar seguimiento colaborativo a defectos de software.</div>
-        </article>
-        <article>
-          <p>Análisis</p>
-          <h2>SonarQube</h2>
-          <div>Herramienta de inspección continua que identifica vulnerabilidades, duplicaciones y deuda técnica.</div>
-        </article>
-        <article>
-          <p>Análisis</p>
-          <h2>ESLint</h2>
-          <div>Analizador estático que revisa código JavaScript para detectar errores y aplicar reglas de calidad.</div>
-        </article>
-        <article>
-          <p>Pruebas</p>
-          <h2>TestRail</h2>
-          <div>Solución para organizar casos de prueba, registrar resultados y generar reportes de cobertura.</div>
-        </article>
-        <article>
-          <p>Pruebas</p>
-          <h2>Selenium</h2>
-          <div>Conjunto de herramientas para automatizar pruebas funcionales en aplicaciones web y navegadores.</div>
-        </article>
-      </div>
-    </section>
-
-    <section class="static-section page-anchor" id="sdlc">
-      <p class="kicker">Procesos de desarrollo</p>
-      <h1>Ciclo de Vida del Software (SDLC)</h1>
-      <p class="topic-intro">El ciclo de vida organiza la construcción del software en siete etapas conectadas.</p>
-      <div class="sdlc-overview">
-        <p>Visión general</p>
-        <h2>De una necesidad a un producto sostenible</h2>
-        <div>El SDLC proporciona una estructura común para planificar, construir, verificar, entregar y mejorar software. Aunque se presenta como una secuencia, la información obtenida en una etapa puede hacer necesario volver a una anterior y ajustar decisiones.</div>
-      </div>
-      <div class="plain-timeline">
-        <article>
-          <span>01</span>
-          <div>
-            <h2>Planificación</h2>
-            <p>Se define el alcance del proyecto, sus objetivos, los recursos necesarios, el cronograma y los principales riesgos.</p><p><strong>¿Por qué es importante?</strong> Establece una dirección clara y permite evaluar la viabilidad del proyecto antes de comprometer tiempo y recursos.</p>
-          </div>
-        </article>
-        <article>
-          <span>02</span>
-          <div>
-            <h2>Requisitos</h2>
-            <p>Se identifican las necesidades de los usuarios, los objetivos del proyecto y las restricciones que debe respetar el sistema.</p><p><strong>¿Por qué es importante?</strong> Alinea al equipo y reduce el riesgo de construir una solución que no responda al problema real.</p>
-          </div>
-        </article>
-        <article>
-          <span>03</span>
-          <div>
-            <h2>Diseño</h2>
-            <p>Se define la arquitectura, la experiencia de uso, los componentes y la manera en que se organizarán los datos.</p><p><strong>¿Por qué es importante?</strong> Ofrece una guía técnica antes de programar y permite anticipar problemas de integración, seguridad o escalabilidad.</p>
-          </div>
-        </article>
-        <article>
-          <span>04</span>
-          <div>
-            <h2>Desarrollo</h2>
-            <p>El equipo transforma los requisitos y el diseño en código funcional siguiendo estándares y buenas prácticas.</p><p><strong>¿Por qué es importante?</strong> Materializa la solución y asegura que cada componente pueda mantenerse, probarse e integrarse correctamente.</p>
-          </div>
-        </article>
-        <article>
-          <span>05</span>
-          <div>
-            <h2>Pruebas</h2>
-            <p>Se comprueba el comportamiento del producto, se detectan defectos y se valida el cumplimiento de los requisitos.</p><p><strong>¿Por qué es importante?</strong> Evita que errores críticos lleguen a los usuarios y aporta evidencia sobre la calidad del producto.</p>
-          </div>
-        </article>
-        <article>
-          <span>06</span>
-          <div>
-            <h2>Despliegue</h2>
-            <p>La versión validada se prepara y publica en el entorno donde será utilizada por sus usuarios.</p><p><strong>¿Por qué es importante?</strong> Permite entregar valor de forma controlada, reduciendo interrupciones y riesgos durante la puesta en marcha.</p>
-          </div>
-        </article>
-        <article>
-          <span>07</span>
-          <div>
-            <h2>Mantenimiento</h2>
-            <p>Se monitorea el funcionamiento, se corrigen fallas y se incorporan mejoras durante la vida útil del software.</p><p><strong>¿Por qué es importante?</strong> Mantiene el producto seguro, útil y compatible mientras cambian las necesidades y la tecnología.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="static-section page-anchor" id="metodologias">
-      <p class="kicker">Metodologías</p>
-      <h1>Metodologías Ágiles</h1>
-      <p class="topic-intro">Las metodologías ágiles priorizan la colaboración, la adaptación y la entrega frecuente de valor.</p>
-      <div class="concept-grid">
-        <article>
-          <span>01</span>
-          <h3>Scrum</h3>
-          <p>Organiza el trabajo en ciclos cortos llamados sprints, con objetivos claros y revisión frecuente del progreso.</p><p><strong>Conceptos:</strong> Product Backlog, Sprint y eventos, roles y responsabilidades.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h3>Kanban</h3>
-          <p>Permite visualizar el flujo de trabajo, limitar tareas en curso e identificar oportunidades de mejora.</p><p><strong>Conceptos:</strong> visualizar el trabajo, limitar el WIP y optimizar el flujo.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h3>Extreme Programming (XP)</h3>
-          <p>Reúne prácticas técnicas que favorecen la simplicidad, la colaboración y una respuesta rápida al cambio.</p><p><strong>Conceptos:</strong> programación en pareja, pruebas automatizadas e integración continua.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="static-section page-anchor" id="recursos">
-      <p class="kicker">Recursos</p>
-      <h1>Recursos y Aprendizaje</h1>
-      <p class="topic-intro">Una selección de materiales para profundizar conceptos, resolver dudas y continuar aprendiendo.</p>
-      <div class="static-link-list">
-        <a href="#glosario">Glosario <p>Términos esenciales de calidad, procesos y metodologías de software.</p></a>
-        <a href="#preguntas">Preguntas frecuentes <p>Respuestas breves a dudas habituales sobre gestión de calidad y desarrollo.</p></a>
-        <a href="#enlaces">Enlaces de interés <p>Fuentes y organizaciones de referencia para ampliar los temas.</p></a>
-      </div>
-      <details class="static-details page-anchor" id="glosario"><summary>Glosario</summary><p><strong>Calidad de software:</strong> capacidad del producto para responder a necesidades y criterios definidos.</p><p><strong>Ciclo de vida:</strong> etapas que atraviesa un producto desde su concepción hasta su mantenimiento o retiro.</p><p><strong>Agilidad:</strong> enfoque de trabajo basado en colaboración, adaptación y entregas frecuentes.</p></details>
-      <details class="static-details page-anchor" id="preguntas"><summary>Preguntas frecuentes</summary><p><strong>¿Por dónde comenzar?</strong> Por los fundamentos de calidad y los requisitos del producto.</p><p><strong>¿Qué metodología elegir?</strong> Depende del equipo, del contexto y de las necesidades del proyecto.</p><p><strong>¿Cómo medir la calidad?</strong> Con indicadores como cobertura de pruebas, densidad de defectos y tiempo de reparación.</p></details>
-      <details class="static-details page-anchor" id="enlaces"><summary>Enlaces de interés</summary><p>Consulta normas internacionales, comunidades profesionales y materiales educativos para ampliar los conceptos.</p></details>
-      <details class="static-details"><summary>Ejercicios y casos prácticos</summary><p>Actividades para aplicar conceptos de calidad, procesos y metodologías en situaciones concretas: análisis de casos, ejercicios de aplicación y pautas de evaluación.</p></details>
-    </section>
-  </main>
-  <footer class="static-footer">
-    <a class="footer-brand" href="#inicio"><img src="Imagenes/logoscrum.png" width="70psx" height="70px"/><span>Sistema de Gestión de Calidad</span></a>
-    <div><a href="#contenido">Sobre nosotros</a><a href="mailto:hola@gestiondecalidad.com">Contacto</a></div>
-  </footer>
+<footer>
+  <a class="footer-brand" href="#/"><img src="Imagenes/logoscrum.png" alt=""><span>Sistema de Gestión de Calidad</span></a>
+  <div><a href="#/sobre-nosotros">Sobre nosotros</a><a href="#/contacto">Contacto</a></div>
+</footer>
 </div>
+
+<script>
+/* ---------- DATOS ---------- */
+const MENU = [
+  {label:"Inicio", options:[{label:"Presentación", href:"#/"}]},
+  {label:"Calidad", options:[
+    {label:"Fundamentos", href:"#/calidad/fundamentos"},
+    {label:"Técnicas de Aseguramiento de la Calidad", href:"#/calidad/tecnicas"},
+    {label:"Herramientas de Calidad", href:"#/calidad/herramientas"}]},
+  {label:"Procesos", options:[{label:"Ciclo de Vida del Software (SDLC)", href:"#/procesos/ciclo-de-vida"}]},
+  {label:"Metodologías", options:[
+    {label:"Scrum", href:"#/metodologias/scrum"},
+    {label:"Kanban", href:"#/metodologias/kanban"},
+    {label:"XP · Extreme Programming", href:"#/metodologias/xp"},
+    {label:"Comparador de metodologías", href:"#/metodologias/comparador"},
+    {label:"Encuesta de preferencias", href:"#/metodologias/encuesta"}]},
+  {label:"Recursos", options:[
+    {label:"Glosario", href:"#/recursos/glosario"},
+    {label:"Preguntas frecuentes", href:"#/recursos/preguntas-frecuentes"},
+    {label:"Enlaces de interés", href:"#/recursos/enlaces"},
+    {label:"Ejercicios y casos prácticos", href:"#/recursos/ejercicios"}]},
+  {label:"Nosotros", options:[
+    {label:"Sobre nosotros", href:"#/sobre-nosotros"},
+    {label:"Contacto", href:"#/contacto"}]}
+];
+
+const BAR = [];
+
+const GLOSSARY = [
+  ["Agilidad","Capacidad de responder al cambio mediante ciclos breves y aprendizaje continuo."],
+  ["Backlog","Lista ordenada de necesidades, mejoras o trabajo pendiente de un producto."],
+  ["Calidad de software","Grado en que un producto satisface necesidades explícitas e implícitas."],
+  ["Cobertura de pruebas","Proporción del código o los requisitos verificados mediante pruebas."],
+  ["Defecto","Problema en un producto que provoca un resultado incorrecto o inesperado."],
+  ["Integración continua","Práctica de integrar y verificar cambios de código con alta frecuencia."],
+  ["Kanban","Método visual para gestionar flujo, trabajo en curso y mejora continua."],
+  ["Mantenibilidad","Facilidad con la que un sistema puede analizarse, modificarse y probarse."],
+  ["Scrum","Marco ágil que organiza el trabajo complejo en Sprints con objetivos definidos."],
+  ["Sprint","Ciclo de Scrum de un mes o menos en el que se crea un incremento útil."],
+  ["Usabilidad","Capacidad de un producto para ser comprendido y utilizado con efectividad."],
+  ["WIP","Trabajo en curso; limitarlo ayuda a reducir bloqueos y mejorar el flujo."]
+];
+
+const FAQ = [
+  ["¿Qué diferencia hay entre calidad y pruebas de software?","La calidad es un objetivo amplio que abarca procesos, producto y experiencia de uso. Las pruebas son una de las técnicas utilizadas para aportar evidencia y detectar riesgos."],
+  ["¿Una metodología ágil elimina la planificación?","No. La planificación continúa, pero se distribuye en distintos niveles y se actualiza con nueva información en lugar de quedar fija al inicio."],
+  ["¿Cuándo conviene utilizar Scrum?","Scrum resulta útil ante problemas complejos, cuando el equipo necesita aprender mediante entregas frecuentes y puede trabajar con objetivos de Sprint."],
+  ["¿Kanban sirve únicamente para equipos de soporte?","No. Puede aplicarse a cualquier proceso con flujo de trabajo. Es frecuente en soporte porque maneja bien la demanda continua, pero también funciona en desarrollo y gestión."],
+  ["¿Qué estándar reemplazó a ISO/IEC 9126?","La familia ISO/IEC 25000, conocida como SQuaRE, amplió y reorganizó los modelos de calidad, medición, requisitos y evaluación."],
+  ["¿Cómo puedo comenzar a medir la calidad?","Define primero el objetivo de la medición. Luego elige pocas métricas accionables, como defectos críticos, cobertura relevante, tiempo de respuesta o satisfacción del usuario."]
+];
+
+const EXERCISES = [
+  {type:"Caso práctico", title:"Calidad en una tienda en línea", level:"Inicial",
+   prompt:"Una tienda publica una nueva versión de su plataforma. Los usuarios pueden comprar, pero algunos abandonan el proceso porque las páginas cargan lentamente y los mensajes de error no son claros. Identifica tres características de calidad afectadas y propone una métrica para cada una.",
+   solution:"Rendimiento: medir el tiempo de respuesta de las páginas críticas. Usabilidad: medir la tasa de abandono y realizar pruebas con usuarios. Adecuación funcional: registrar la cantidad de operaciones que terminan con errores. Una buena respuesta vincula cada problema observable con una característica y una medida verificable."},
+  {type:"Ejercicio de aplicación", title:"Diseña una estrategia de pruebas", level:"Intermedio",
+   prompt:"Un equipo desarrolla un sistema de reservas que calcula precios, consulta disponibilidad y procesa pagos. Define qué pruebas unitarias, de integración y de sistema aplicarías antes de la publicación.",
+   solution:"Las pruebas unitarias deben cubrir cálculos de precio, descuentos y validaciones. Las de integración deben verificar la comunicación con disponibilidad y pagos, incluidos fallos de servicios. Las pruebas de sistema deben recorrer reservas completas, cancelaciones y escenarios sin disponibilidad."},
+  {type:"Análisis metodológico", title:"Elige un enfoque de trabajo", level:"Intermedio",
+   prompt:"Una organización recibe solicitudes de soporte todos los días, con prioridades que cambian según el impacto. Compara Scrum, Kanban y Cascada y selecciona el enfoque más apropiado, justificando tu decisión.",
+   solution:"Kanban es el enfoque más apropiado porque permite incorporar solicitudes continuamente, visualizar bloqueos y limitar el trabajo en curso. Scrum podría servir si las solicitudes pudieran agruparse en ciclos estables; Cascada sería poco flexible frente al cambio diario de prioridades."}
+];
+
+const SDLC = [
+  {t:"Planificación", x:"Se define el alcance del proyecto, sus objetivos, los recursos necesarios, el cronograma y los principales riesgos.", i:"Establece una dirección clara y permite evaluar la viabilidad antes de comprometer tiempo y recursos."},
+  {t:"Requisitos", x:"Se identifican las necesidades de los usuarios, los objetivos y las restricciones que debe respetar el sistema.", i:"Alinea al equipo y reduce el riesgo de construir una solución que no responde al problema real."},
+  {t:"Diseño", x:"Se define la arquitectura, la experiencia de uso, los componentes y la organización de los datos.", i:"Ofrece una guía técnica antes de programar y anticipa problemas de integración, seguridad o escalabilidad."},
+  {t:"Desarrollo", x:"El equipo transforma requisitos y diseño en código funcional siguiendo estándares y buenas prácticas.", i:"Materializa la solución y asegura que cada componente pueda mantenerse, probarse e integrarse."},
+  {t:"Pruebas", x:"Se comprueba el comportamiento del producto, se detectan defectos y se valida el cumplimiento de requisitos.", i:"Evita que errores críticos lleguen a los usuarios y aporta evidencia sobre la calidad."},
+  {t:"Despliegue", x:"La versión validada se prepara y publica en el entorno donde será utilizada.", i:"Permite entregar valor de forma controlada, reduciendo interrupciones y riesgos."},
+  {t:"Mantenimiento", x:"Se monitorea el funcionamiento, se corrigen fallas y se incorporan mejoras durante la vida útil.", i:"Mantiene el producto seguro, útil y compatible mientras cambian las necesidades y la tecnología."}
+];
+
+const METHODS = [
+  {id:"scrum", name:"Scrum", accent:"Iterativa", v:{Enfoque:"Trabajo iterativo en sprints con objetivos definidos.",Cambio:"Se incorpora entre sprints y se prioriza en el backlog.",Entrega:"Incrementos funcionales al finalizar cada sprint.",Roles:"Product Owner, Scrum Master y equipo de desarrollo.",Seguimiento:"Eventos periódicos, backlog y métricas del sprint.",Ideal:"Productos complejos con requisitos que evolucionan."}},
+  {id:"kanban", name:"Kanban", accent:"Flujo continuo", v:{Enfoque:"Visualización y optimización continua del flujo.",Cambio:"Puede incorporarse en cualquier momento según capacidad.",Entrega:"Continua, cuando cada elemento termina su recorrido.",Roles:"No prescribe roles; se adapta a la estructura existente.",Seguimiento:"Tablero, límites WIP y tiempo de ciclo.",Ideal:"Soporte, mantenimiento y prioridades cambiantes."}},
+  {id:"xp", name:"XP", accent:"Excelencia técnica", v:{Enfoque:"Iteraciones breves apoyadas en prácticas de ingeniería.",Cambio:"Se acepta mediante diseño simple y retroalimentación.",Entrega:"Versiones pequeñas y frecuentes.",Roles:"Cliente cercano, programadores, coach y tracker.",Seguimiento:"Pruebas, integración continua y velocidad.",Ideal:"Equipos pequeños con alta incertidumbre técnica."}},
+  {id:"cascada", name:"Cascada", accent:"Secuencial", v:{Enfoque:"Fases consecutivas con planificación detallada.",Cambio:"Requiere evaluación formal y puede tener alto costo.",Entrega:"Una entrega principal al completar las fases.",Roles:"Especialistas organizados por etapa del proceso.",Seguimiento:"Hitos, documentación y cumplimiento del plan.",Ideal:"Proyectos regulados con requisitos estables."}}
+];
+
+const SURVEY = [
+  {q:"¿Qué tan definidos están los requisitos?", c:"Piensa cuánto podrían cambiar una vez iniciado el proyecto.", o:[
+    ["Cambian con frecuencia",{Scrum:3,Kanban:2,Cascada:0}],["Hay una base, pero debemos aprender",{Scrum:3,Kanban:1,Cascada:1}],["Están completos y son estables",{Scrum:0,Kanban:1,Cascada:3}]]},
+  {q:"¿Cómo necesitas entregar valor?", c:"Elige el ritmo de publicación que mejor responde al contexto.", o:[
+    ["En incrementos cada pocas semanas",{Scrum:3,Kanban:1,Cascada:0}],["De forma continua, apenas esté listo",{Scrum:1,Kanban:3,Cascada:0}],["En una entrega final planificada",{Scrum:0,Kanban:0,Cascada:3}]]},
+  {q:"¿Cómo llega el trabajo al equipo?", c:"Considera si las solicitudes pueden planificarse o aparecen sin aviso.", o:[
+    ["Por objetivos que agrupamos en ciclos",{Scrum:3,Kanban:1,Cascada:1}],["Como solicitudes continuas y variables",{Scrum:1,Kanban:3,Cascada:0}],["Según un plan y alcance cerrados",{Scrum:0,Kanban:1,Cascada:3}]]},
+  {q:"¿Qué nivel de documentación exige el proyecto?", c:"Incluye aprobaciones, auditorías o trazabilidad formal.", o:[
+    ["La mínima necesaria para colaborar",{Scrum:3,Kanban:2,Cascada:0}],["Ligera, actualizada junto al flujo",{Scrum:1,Kanban:3,Cascada:1}],["Detallada y aprobada por etapas",{Scrum:0,Kanban:0,Cascada:3}]]},
+  {q:"¿Cómo prefieres medir el avance?", c:"Selecciona la señal que daría más claridad a las personas involucradas.", o:[
+    ["Objetivos de sprint completados",{Scrum:3,Kanban:1,Cascada:0}],["Flujo, bloqueos y tiempo de ciclo",{Scrum:1,Kanban:3,Cascada:0}],["Fases, hitos y entregables aprobados",{Scrum:0,Kanban:0,Cascada:3}]]}
+];
+
+const TESTS = [
+  {n:"Pruebas unitarias", g:"Nivel", s:"Verifican componentes pequeños de forma aislada.", d:"Se ejecutan con rapidez y permiten detectar fallas en funciones, clases o módulos antes de integrarlos."},
+  {n:"Pruebas de integración", g:"Nivel", s:"Comprueban la comunicación entre módulos.", d:"Validan interfaces, flujo de datos y dependencias cuando dos o más componentes comienzan a trabajar juntos."},
+  {n:"Pruebas de sistema", g:"Nivel", s:"Evalúan el producto completo contra sus requisitos.", d:"Simulan escenarios reales de principio a fin en un entorno cercano al de producción."},
+  {n:"Caja negra", g:"Técnica", s:"Examina entradas y salidas sin mirar el código.", d:"Utiliza particiones de equivalencia, valores límite y casos de uso para comprobar el comportamiento observable."},
+  {n:"Caja blanca", g:"Técnica", s:"Analiza la estructura y los caminos internos.", d:"Diseña casos a partir del código para cubrir sentencias, decisiones, condiciones y recorridos lógicos."}
+];
+
+const TOOLS = [
+  {n:"Jira", c:"Defectos", t:"Plataforma para registrar incidencias, asignar responsables y controlar cada error hasta su resolución."},
+  {n:"Bugzilla", c:"Defectos", t:"Sistema especializado en documentar, clasificar y dar seguimiento colaborativo a defectos de software."},
+  {n:"SonarQube", c:"Análisis", t:"Herramienta de inspección continua que identifica vulnerabilidades, duplicaciones y deuda técnica."},
+  {n:"ESLint", c:"Análisis", t:"Analizador estático que revisa código JavaScript para detectar errores y aplicar reglas de calidad."},
+  {n:"TestRail", c:"Pruebas", t:"Solución para organizar casos de prueba, registrar resultados y generar reportes de cobertura."},
+  {n:"Selenium", c:"Pruebas", t:"Conjunto de herramientas para automatizar pruebas funcionales en aplicaciones web y navegadores."}
+];
+const TOOL_INTRO = {
+  Defectos:["Seguimiento de defectos","Estas herramientas centralizan los errores encontrados durante el desarrollo. Permiten documentarlos, asignar prioridades y acompañar su resolución."],
+  Análisis:["Análisis de calidad","Las herramientas de análisis examinan el código sin necesidad de ejecutar toda la aplicación. Ayudan a encontrar problemas y malas prácticas antes de que afecten al producto."],
+  Pruebas:["Gestión y automatización de pruebas","Estas soluciones permiten planificar verificaciones, administrar casos de prueba y automatizar tareas repetitivas."]
+};
+
+const SCRUM = {
+  Roles:[["Product Owner","Ordena el Product Backlog y maximiza el valor que produce el equipo."],["Scrum Master","Facilita Scrum, elimina impedimentos y acompaña la mejora continua."],["Developers","Construyen un incremento útil y de calidad durante cada Sprint."]],
+  Eventos:[["Sprint Planning","Define el objetivo del Sprint y el trabajo necesario para alcanzarlo."],["Daily Scrum","Inspección diaria de 15 minutos para adaptar el plan de trabajo."],["Review y Retrospective","Revisan el producto y luego la forma de trabajo para mejorar el próximo ciclo."]],
+  Artefactos:[["Product Backlog","Lista ordenada y cambiante de todo lo necesario para mejorar el producto."],["Sprint Backlog","Objetivo, elementos seleccionados y plan de acción para el Sprint actual."],["Incremento","Resultado utilizable que cumple la Definición de Terminado."]]
+};
+const EVENTS = [
+  {name:"Planning", moment:"Inicio", pos:4, hpw:2, obj:"Acordar por qué el Sprint es valioso, qué se hará y cómo comenzará el trabajo."},
+  {name:"Daily", moment:"Cada día", pos:42, hpw:0, obj:"Inspeccionar el avance hacia el objetivo y adaptar el plan para el siguiente día."},
+  {name:"Review", moment:"Cierre", pos:82, hpw:1, obj:"Inspeccionar el resultado con los interesados y decidir futuras adaptaciones."},
+  {name:"Retrospective", moment:"Después de la Review", pos:94, hpw:.75, obj:"Analizar personas, procesos y herramientas para definir mejoras concretas."}
+];
+
+const LINKS = [
+  {type:"PDF", title:"La Guía de Scrum", source:"Scrum Guides", d:"Definición oficial de Scrum, sus responsabilidades, eventos y artefactos.", h:"https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-Spanish-Latin-South-American.pdf"},
+  {type:"Web", title:"Software product quality", source:"ISO", d:"Información sobre ISO/IEC 25010 y el modelo de calidad de producto.", h:"https://www.iso.org/standard/78176.html"},
+  {type:"Organización", title:"International Software Testing Qualifications Board", source:"ISTQB", d:"Programa internacional, glosario y materiales sobre pruebas de software.", h:"https://www.istqb.org/"},
+  {type:"PDF", title:"The Kanban Guide", source:"Kanban Guides", d:"Guía breve sobre estrategia, flujo, WIP y métricas fundamentales de Kanban.", h:"https://kanbanguides.org/english/"},
+  {type:"Libro", title:"Guide to the SWEBOK", source:"IEEE Computer Society", d:"Cuerpo de conocimiento de referencia para la ingeniería de software.", h:"https://www.computer.org/education/bodies-of-knowledge/software-engineering"},
+  {type:"Web", title:"Manifesto for Agile Software Development", source:"Agile Manifesto", d:"Valores y principios que dieron origen al movimiento ágil.", h:"https://agilemanifesto.org/iso/es/manifesto.html"}
+];
+
+const TEAM = [
+  {i:"SM", role:"Scrum Master", f:"Facilitación y mejora continua", m:"Crear un entorno de colaboración donde el equipo pueda aprender, adaptarse y entregar valor con claridad."},
+  {i:"UX", role:"Diseñador/a", f:"Experiencia y comunicación visual", m:"Transformar conceptos técnicos en recorridos comprensibles, accesibles y agradables."},
+  {i:"DEV", role:"Programador/a", f:"Desarrollo e interacción", m:"Construir herramientas educativas simples y confiables que permitan explorar la calidad en la práctica."},
+  {i:"QA", role:"Tester", f:"Verificación y accesibilidad", m:"Asegurar que cada contenido y funcionalidad responda correctamente en distintos escenarios y dispositivos."}
+];
+
+/* ---------- ESTADO ---------- */
+const S = {
+  standard:"iso9126", testOpen:"Pruebas unitarias", toolFilter:"Defectos",
+  scrumTopic:"Roles", ev:0, weeks:4, kanban:0,
+  methods:["scrum","kanban"], survey:{step:0, answers:[null,null,null,null,null]},
+  sdlc:0, faq:0, exercise:null, glossQuery:""
+};
+
+/* ---------- UTILIDADES ---------- */
+const $ = (s, r=document) => r.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const norm = s => s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+const ARROW = '<span aria-hidden="true">→</span>';
+
+function pageIntro(cat, title, body){
+  return `<section class="topic-page">
+    <a class="back-link" href="#/">← Volver al inicio</a>
+    <div class="topic-layout">
+      <div class="topic-heading"><p>${esc(cat)}</p><h1>${title}</h1></div>
+      <div class="topic-body">${body}</div>
+    </div></section>`;
+}
+
+/* ---------- PÁGINAS ---------- */
+const pages = {};
+
+pages.home = () => `
+<section class="hero" id="inicio">
+  <div class="hero-copy">
+    <p class="kicker">Aprende · Mejora · Evoluciona</p>
+    <h1>Sistema de Gestión<br>de <em>Calidad</em></h1>
+    <p class="hero-intro">Un espacio para comprender cómo se construye software de calidad, desde sus fundamentos hasta los procesos y metodologías que utiliza la industria.</p>
+  </div>
+  <div class="hero-art" aria-hidden="true"><img src="Imagenes/logoscrum.png" alt=""></div>
+</section>
+<section class="content-section" id="contenido">
+  <div class="section-heading"><p>Conocimiento esencial</p><h2>Nuestro contenido</h2></div>
+  <div class="card-grid">
+    ${[
+      ["blue","01","Gestión de la Calidad del Software",["Fundamentos, métricas y estándares ISO","Técnicas y niveles de pruebas","Herramientas y filtros por categoría"],"#/calidad"],
+      ["lilac","02","Procesos de Desarrollo de Software",["Ciclo de Vida del Software (SDLC)","Siete etapas interactivas","Importancia de cada etapa"],"#/procesos/ciclo-de-vida"],
+      ["mint","03","Metodologías Ágiles",["Scrum y cronograma del Sprint","Kanban y tablero interactivo","XP · Extreme Programming","Comparador de metodologías","Encuesta de preferencias"],"#/metodologias/scrum"],
+      ["peach","04","Recursos y Aprendizaje",["Glosario con búsqueda","Preguntas frecuentes desplegables","Enlaces externos de interés","Ejercicios con soluciones"],"#/recursos/glosario"]
+    ].map(c=>`<article class="content-card ${c[0]}">
+      <span class="card-number">${c[1]}</span>
+      <div><h3>${c[2]}</h3><ul>${c[3].map(i=>`<li>${i}</li>`).join("")}</ul></div>
+      <a class="pill" href="${c[4]}">Ver más ${ARROW}</a></article>`).join("")}
+  </div>
+</section>`;
+
+pages.calidad = () => pageIntro("Gestión de la calidad","Gestión de la Calidad del Software",`
+  <p class="topic-intro">Conoce los fundamentos, las técnicas y las herramientas que permiten prevenir defectos y construir productos confiables.</p>
+  <div class="link-grid">
+    ${[["01","Fundamentos","Conceptos clave, métricas y estándares ISO 9126/25000.","#/calidad/fundamentos"],
+       ["02","Técnicas de Aseguramiento de la Calidad","Tipos, niveles y técnicas de pruebas de software.","#/calidad/tecnicas"],
+       ["03","Herramientas de Calidad","Gestión de pruebas, seguimiento de defectos y análisis de calidad.","#/calidad/herramientas"]]
+      .map(s=>`<a href="${s[3]}"><span>${s[0]}</span><h2>${s[1]}</h2><p>${s[2]}</p><strong>Explorar ${ARROW}</strong></a>`).join("")}
+  </div>`);
+
+pages.fundamentos = () => {
+  const std = S.standard === "iso9126"
+    ? `<h3 style="margin:0 0 14px;font-size:24px">Modelo precursor de calidad</h3><p>Organiza la calidad en seis características: funcionalidad, fiabilidad, usabilidad, eficiencia, mantenibilidad y portabilidad.</p>`
+    : `<h3 style="margin:0 0 14px;font-size:24px">Familia SQuaRE</h3><p>Integra requisitos, medición y evaluación de calidad. Amplía el modelo anterior con seguridad, compatibilidad y una visión actual de la calidad en uso.</p>`;
+  return pageIntro("Gestión de la calidad","Fundamentos",`
+  <p class="topic-intro">La calidad de software es la capacidad de un producto para satisfacer necesidades explícitas e implícitas de manera confiable, eficiente y sostenible.</p>
+  <div class="block"><p class="tag">Conceptos clave</p><h2 class="h2b">La calidad se construye durante todo el proceso</h2>
+    <div class="g3">
+      <article class="card-w"><span class="tag">01</span><h3 class="h2b" style="font-size:18px">Calidad del producto</h3><p>Evalúa qué tan bien el software cumple su función y responde al usuario.</p></article>
+      <article class="card-w" style="background:#f2f2fa"><span class="tag">02</span><h3 class="h2b" style="font-size:18px">Calidad del proceso</h3><p>Ordena las prácticas que permiten prevenir defectos y mejorar resultados.</p></article>
+      <article class="card-w" style="background:#ebf9f8"><span class="tag">03</span><h3 class="h2b" style="font-size:18px">Calidad en uso</h3><p>Mide la efectividad, satisfacción y seguridad en un contexto real.</p></article>
+    </div></div>
+  <div class="block"><p class="tag">Métricas</p><h2 class="h2b">Indicadores para tomar decisiones</h2>
+    <div class="points">
+      <article><span>01</span><h2>Densidad de defectos</h2><p>Errores encontrados en relación con el tamaño del producto.</p></article>
+      <article><span>02</span><h2>Cobertura de pruebas</h2><p>Porcentaje del código o requisitos verificados mediante pruebas.</p></article>
+      <article><span>03</span><h2>Tiempo medio de reparación</h2><p>Rapidez con la que el equipo resuelve una falla detectada.</p></article>
+    </div></div>
+  <div class="block"><p class="tag">Estándares</p><h2 class="h2b">ISO 9126 e ISO 25000</h2>
+    <div class="tabs" role="tablist">
+      <button class="tab ${S.standard==="iso9126"?"on":""}" data-act="std" data-v="iso9126" role="tab" aria-selected="${S.standard==="iso9126"}">ISO 9126</button>
+      <button class="tab ${S.standard==="iso25000"?"on":""}" data-act="std" data-v="iso25000" role="tab" aria-selected="${S.standard==="iso25000"}">ISO 25000</button>
+    </div>
+    <div class="navy-box" style="min-height:180px">${std}</div></div>`);
+};
+
+pages.tecnicas = () => pageIntro("Gestión de la calidad","Técnicas de Aseguramiento de la Calidad",`
+  <p class="topic-intro">Las pruebas de software ayudan a prevenir riesgos y comprobar que cada parte del sistema funciona como se espera. Selecciona una tarjeta para conocer más.</p>
+  <div class="chips" style="gap:20px;font-size:12px;font-weight:700;color:var(--navy)"><span>● Niveles de prueba</span><span>● Técnicas de diseño</span></div>
+  <div class="test-grid">
+    ${TESTS.map((t,i)=>{const o=S.testOpen===t.n; return `
+    <article class="test-card ${o?"open":""}">
+      <button data-act="test" data-v="${esc(t.n)}" aria-expanded="${o}">
+        <span>0${i+1} · ${t.g}</span><h2>${t.n}</h2><p>${t.s}</p><i>${o?"−":"+"}</i>
+      </button>
+      <div class="test-detail"><p>${t.d}</p></div>
+    </article>`}).join("")}
+  </div>`);
+
+pages.herramientas = () => {
+  const f = S.toolFilter, intro = TOOL_INTRO[f];
+  return pageIntro("Gestión de la calidad","Herramientas de Calidad",`
+  <p class="topic-intro">Las herramientas apoyan la gestión de pruebas, el seguimiento de defectos y el análisis automatizado. Filtra según el tipo de tarea.</p>
+  <div class="chips">${Object.keys(TOOL_INTRO).map(c=>`<button class="chip ${f===c?"on":""}" data-act="tool" data-v="${c}" aria-pressed="${f===c}">${c}</button>`).join("")}</div>
+  <div class="tool-cat"><p class="tag">Introducción</p><h2>${intro[0]}</h2><p>${intro[1]}</p></div>
+  <p class="tag" style="margin:30px 0 14px">Ejemplos · Herramientas representativas</p>
+  <div class="tools-grid">
+    ${TOOLS.filter(t=>t.c===f).map(t=>`<article>
+      <svg class="tool-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M9 7h14v20H9V7Z"/><path d="M13 7V5h6v2M12 15l3 3 5-6M13 23h6"/></svg>
+      <p class="tag">${t.c}</p><h2>${t.n}</h2><p>${t.t}</p></article>`).join("")}
+  </div>`);
+};
+
+pages.sdlc = () => {
+  const a = S.sdlc;
+  return pageIntro("Procesos de desarrollo","Ciclo de Vida SDLC",`
+  <p class="topic-intro">El ciclo de vida organiza la construcción del software en siete etapas conectadas. Recorre la línea de tiempo para comprender su secuencia e importancia.</p>
+  <div class="navy-box" style="margin-bottom:34px"><p class="tag">Visión general</p><h2 class="h2b" style="color:#fff">De una necesidad a un producto sostenible</h2>
+    <p>El SDLC proporciona una estructura común para planificar, construir, verificar, entregar y mejorar software. Aunque se presenta como una secuencia, la información de una etapa puede obligar a volver a una anterior.</p></div>
+  <div class="progress"><span style="width:${(a+1)/SDLC.length*100}%"></span></div>
+  <p style="margin:0 0 28px;color:var(--navy);font-size:12px;font-weight:700">Selecciona una etapa para conocer su función e importancia.</p>
+  <div class="timeline">
+    ${SDLC.map((s,i)=>`<button class="tl-item ${i===a?"active":""} ${i<a?"done":""}" data-act="sdlc" data-v="${i}" ${i===a?'aria-current="step"':""}>
+      <span>0${i+1}</span>
+      <div><h2>${s.t}</h2><p>${s.x}</p><p class="imp"><strong>¿Por qué es importante?</strong>${s.i}</p></div>
+    </button>`).join("")}
+  </div>
+  <div class="ctrl"><p style="margin:0;color:var(--navy);font-size:12px;font-weight:800">Etapa ${a+1} de ${SDLC.length}</p>
+    <div>
+      <button class="btn" data-act="sdlcNav" data-v="-1" ${a===0?"disabled":""}>Anterior</button>
+      <button class="btn" data-act="sdlcNav" data-v="1" ${a===SDLC.length-1?"disabled":""}>Siguiente ${ARROW}</button>
+    </div></div>`);
+};
+
+pages.xp = () => pageIntro("Metodologías","Extreme Programming",`
+  <p class="topic-intro">XP reúne prácticas técnicas que favorecen la simplicidad, la colaboración y una respuesta rápida al cambio.</p>
+  <div class="points">
+    <article><span>01</span><h2>Programación en pareja</h2><p>Dos personas trabajan juntas en un mismo código, mejorando la calidad mediante revisión continua.</p></article>
+    <article><span>02</span><h2>Pruebas automatizadas</h2><p>Las pruebas se escriben antes o junto con el código y se ejecutan con frecuencia.</p></article>
+    <article><span>03</span><h2>Integración continua</h2><p>Los cambios se integran varias veces al día para detectar conflictos de forma temprana.</p></article>
+  </div>`);
+
+pages.scrum = () => {
+  const ev = EVENTS[S.ev], hrs = ev.hpw * S.weeks;
+  const dur = ev.name==="Daily" ? "15 minutos por día" : `Hasta ${hrs} ${hrs===1?"hora":"horas"}`;
+  return pageIntro("Metodologías ágiles","Scrum en profundidad",`
+  <p class="topic-intro">Scrum organiza problemas complejos en ciclos breves de aprendizaje. Explora sus responsabilidades, eventos y artefactos, y recorre un Sprint de hasta cuatro semanas.</p>
+  <div class="tabs">${Object.keys(SCRUM).map(k=>`<button class="tab ${S.scrumTopic===k?"on":""}" data-act="scrumTopic" data-v="${k}" role="tab" aria-selected="${S.scrumTopic===k}">${S.scrumTopic===k?"●":"○"} ${k}</button>`).join("")}</div>
+  <div class="g3">${SCRUM[S.scrumTopic].map((it,i)=>`<article><span class="tag">0${i+1}</span><h2>${it[0]}</h2><p>${it[1]}</p></article>`).join("")}</div>
+  <div class="flow">
+    <div><span class="tag">01</span><strong>Product Backlog</strong><small>Todo el trabajo posible</small></div><i>→</i>
+    <div><span class="tag">02</span><strong>Sprint Backlog</strong><small>Trabajo seleccionado</small></div><i>→</i>
+    <div><span class="tag">03</span><strong>Incremento</strong><small>Valor terminado</small></div>
+  </div>
+  <section class="lab">
+    <div class="lab-head"><div><p class="tag">Diagrama interactivo</p><h2>Sprint de ${S.weeks} ${S.weeks===1?"semana":"semanas"}</h2></div><span>Selecciona un evento</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;margin-bottom:26px;padding:13px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+      <p style="margin:0;color:var(--navy);font-size:12px;font-weight:800">Duración del Sprint</p>
+      <div class="chips" style="margin:0">${[1,2,3,4].map(w=>`<button class="chip ${S.weeks===w?"on":""}" data-act="weeks" data-v="${w}" aria-pressed="${S.weeks===w}">${w} ${w===1?"semana":"semanas"}</button>`).join("")}</div>
+    </div>
+    <div class="sprint-track">
+      <span class="line"></span>
+      ${EVENTS.map((e,i)=>`<button class="ev ${S.ev===i?"on":""}" style="left:${e.pos}%" data-act="ev" data-v="${i}" aria-pressed="${S.ev===i}"><small>${e.moment}</small>${e.name}</button>`).join("")}
+    </div>
+    <div class="sprint-detail" style="margin-top:20px" aria-live="polite">
+      <div><span class="tag" style="margin:0">Evento seleccionado</span><h3>${ev.name}</h3></div>
+      <p><strong>Duración sugerida</strong>${dur}</p>
+      <p><strong>Objetivo</strong>${ev.obj}</p>
+    </div>
+  </section>`);
+};
+
+pages.kanban = () => {
+  const c = S.kanban, cols = ["Por hacer","En proceso","Hecho"];
+  const counts = [c===0?2:1, c===1?2:1, c===2?1:0];
+  return pageIntro("Gestión visual","Kanban en acción",`
+  <p class="topic-intro">Kanban hace visible el trabajo, limita las tareas simultáneas y ayuda a mejorar el flujo. Mueve la tarjeta didáctica para observar cómo cambia el tablero.</p>
+  <div class="g3">
+    <article class="card-w"><span class="tag">01</span><h2 class="h2b" style="font-size:20px">Visualiza</h2><p>Cada tarjeta representa una unidad de valor y muestra su estado actual.</p></article>
+    <article class="card-w" style="background:#f2f2fa"><span class="tag">02</span><h2 class="h2b" style="font-size:20px">Limita el WIP</h2><p>Menos trabajo simultáneo reduce bloqueos y favorece la finalización.</p></article>
+    <article class="card-w" style="background:#ebf9f8"><span class="tag">03</span><h2 class="h2b" style="font-size:20px">Mejora el flujo</h2><p>El equipo observa tiempos y cuellos de botella para ajustar el proceso.</p></article>
+  </div>
+  <section class="lab">
+    <div class="lab-head"><div><p class="tag">Tablero demostrativo</p><h2>Flujo de una tarea</h2></div><span>WIP en proceso: ${c===1?"2/2":"1/2"}</span></div>
+    <div class="board">
+      ${cols.map((name,i)=>`<div class="col"><header><h3>${name}</h3><span>${counts[i]}</span></header>
+        ${i===0?`<article class="kcard muted"><small>CAL-18</small><strong>Definir criterios de aceptación</strong></article>`:""}
+        ${i===1?`<article class="kcard muted"><small>CAL-14</small><strong>Revisar métricas de calidad</strong></article>`:""}
+        ${c===i?`<article class="kcard demo"><small>DEMO-01 · TU TARJETA</small><strong>Validar formulario de contacto</strong><p style="font-size:11px;color:#5d7180;margin:6px 0 0">Muévela para completar el flujo.</p></article>`:""}
+        ${i===1?`<p class="wip">Límite WIP · 2 tareas</p>`:""}
+      </div>`).join("")}
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:15px;margin-top:20px;flex-wrap:wrap">
+      <p style="margin:0;color:var(--navy);font-size:13px">Estado actual: <strong>${cols[c]}</strong></p>
+      <div style="display:flex;gap:8px">
+        <button class="btn" data-act="kanbanNav" data-v="-1" ${c===0?"disabled":""}>← Retroceder</button>
+        <button class="btn solid" data-act="kanbanNav" data-v="1" ${c===2?"disabled":""}>Avanzar ${ARROW}</button>
+      </div>
+    </div>
+  </section>`);
+};
+
+pages.comparador = () => {
+  const sel = METHODS.filter(m=>S.methods.includes(m.id));
+  const keys = Object.keys(METHODS[0].v);
+  return pageIntro("Metodologías","Comparador interactivo",`
+  <p class="topic-intro">Selecciona dos o más enfoques para contrastar cómo organizan el trabajo, responden al cambio y entregan valor.</p>
+  <p class="tag">Metodologías para comparar · ${S.methods.length} seleccionadas (mínimo 2)</p>
+  <div class="picker">
+    ${METHODS.map(m=>`<button class="${S.methods.includes(m.id)?"on":""}" data-act="method" data-v="${m.id}" aria-pressed="${S.methods.includes(m.id)}">
+      <span class="box"></span><strong>${m.name}</strong><small>${m.accent}</small></button>`).join("")}
+  </div>
+  ${sel.length>=2 ? `<div class="cmp"><table>
+    <thead><tr><th>Característica</th>${sel.map(m=>`<th><span>${m.accent}</span>${m.name}</th>`).join("")}</tr></thead>
+    <tbody>${keys.map(k=>`<tr><th>${k}</th>${sel.map(m=>`<td>${m.v[k]}</td>`).join("")}</tr>`).join("")}</tbody>
+  </table></div>`
+  : `<div class="empty"><h2 style="margin:0 0 8px">Elige al menos dos metodologías</h2><p style="margin:0">La tabla aparecerá cuando haya suficientes opciones para comparar.</p></div>`}`);
+};
+
+pages.encuesta = () => {
+  const sv = S.survey, n = SURVEY.length, isRes = sv.step === n;
+  const totals = {Scrum:0,Kanban:0,Cascada:0};
+  sv.answers.forEach((a,i)=>{ if(a!==null){ const sc = SURVEY[i].o[a][1]; for(const k in sc) totals[k]+=sc[k]; } });
+  const tot = totals.Scrum+totals.Kanban+totals.Cascada;
+  const res = Object.keys(totals).map(k=>({name:k, score:totals[k], pct: tot?Math.round(totals[k]/tot*100):0})).sort((a,b)=>b.score-a.score);
+  const prog = isRes ? 100 : (sv.step+1)/n*100;
+  const desc = {
+    Scrum:"Tu proyecto se beneficiaría de ciclos breves, objetivos claros y revisión frecuente.",
+    Kanban:"Tu proyecto necesita flexibilidad, visibilidad y una gestión continua del flujo.",
+    Cascada:"Tu proyecto valora la previsibilidad, la documentación y una secuencia de fases definida."
+  };
+  let body;
+  if (isRes) {
+    body = `<p class="tag">Tu mejor coincidencia</p><h2 class="h2b" style="font-size:40px">${res[0].name}</h2>
+      <p class="ctx">${desc[res[0].name]}</p>
+      <div class="res-bars">${res.map(r=>`<div><p><strong>${r.name}</strong><span>${r.pct}%</span></p><div class="t"><span style="width:${r.pct}%"></span></div></div>`).join("")}</div>
+      <button class="btn solid" data-act="surveyReset">Repetir encuesta</button>`;
+  } else {
+    const q = SURVEY[sv.step], cur = sv.answers[sv.step];
+    body = `<p class="tag">Sobre tu proyecto</p><h2>${q.q}</h2><p class="ctx">${q.c}</p>
+      <div class="opts" role="radiogroup">
+        ${q.o.map((o,i)=>`<button class="opt ${cur===i?"on":""}" role="radio" aria-checked="${cur===i}" data-act="surveyAns" data-v="${i}"><span>${String.fromCharCode(65+i)}</span>${o[0]}<i></i></button>`).join("")}
+      </div>
+      <div class="sv-actions">
+        <button class="btn" data-act="surveyNav" data-v="-1" ${sv.step===0?"disabled":""}>Anterior</button>
+        <button class="btn solid" data-act="surveyNav" data-v="1" ${cur===null?"disabled":""}>${sv.step===n-1?"Ver resultado":"Siguiente"} ${ARROW}</button>
+      </div>`;
+  }
+  return pageIntro("Metodologías","Encuesta de preferencias",`
+  <p class="topic-intro">Responde cinco preguntas sobre tu proyecto y descubre qué enfoque se ajusta mejor a sus necesidades.</p>
+  <div class="survey">
+    <div class="sv-prog"><div class="top"><span>${isRes?"Resultado":"Pregunta "+(sv.step+1)}</span><strong>${isRes?"Análisis completo":(sv.step+1)+" de "+n}</strong></div>
+      <div class="bar"><span style="width:${prog}%"></span></div></div>
+    <div class="sv-body">${body}</div>
+  </div>`);
+};
+
+pages.glosario = () => {
+  const q = norm(S.glossQuery.trim());
+  const list = GLOSSARY.filter(([t,d])=>norm(t+" "+d).includes(q));
+  return pageIntro("Recursos y aprendizaje","Glosario",`
+  <p class="topic-intro">Encuentra conceptos esenciales sobre calidad, procesos y metodologías usando una búsqueda rápida.</p>
+  <div class="field" style="margin-bottom:20px"><label for="glossSearch">Buscar en el glosario</label>
+    <div style="display:flex;align-items:center;gap:10px"><input id="glossSearch" type="search" value="${esc(S.glossQuery)}" placeholder="Ejemplo: calidad, Sprint, pruebas…" autocomplete="off"><span class="tag" style="margin:0">${list.length}</span></div></div>
+  ${list.length ? `<div class="gloss" id="glossList">${list.map((g,i)=>`<article><span>${g[0][0]}</span><h2>${g[0]}</h2><p>${g[1]}</p></article>`).join("")}</div>`
+    : `<div class="empty"><h2 style="margin:0 0 6px">Sin resultados</h2><p style="margin:0">Prueba con otro término o vuelve al índice completo.</p></div>`}`);
+};
+
+pages["preguntas-frecuentes"] = () => pageIntro("Recursos y aprendizaje","Preguntas frecuentes",`
+  <p class="topic-intro">Respuestas breves para aclarar dudas habituales sobre calidad, procesos y formas de trabajo.</p>
+  ${FAQ.map((f,i)=>`<div class="acc ${S.faq===i?"open":""}">
+    <button data-act="faq" data-v="${i}" aria-expanded="${S.faq===i}"><span class="n">0${i+1}</span><h2>${f[0]}</h2><i>${S.faq===i?"−":"+"}</i></button>
+    <div class="body"><div>${f[1]}</div></div></div>`).join("")}`);
+
+pages.enlaces = () => pageIntro("Recursos y aprendizaje","Enlaces de interés",`
+  <p class="topic-intro">Una selección de guías, estándares, libros y organizaciones para continuar aprendiendo desde fuentes reconocidas.</p>
+  <div class="link-grid">
+    ${LINKS.map((r,i)=>`<a href="${r.h}" target="_blank" rel="noopener noreferrer">
+      <div style="display:flex;justify-content:space-between"><span style="width:48px;height:48px;display:grid;place-items:center;border-radius:15px;color:#fff;font-size:10px;font-weight:800;background:var(--navy)">${r.type.slice(0,3).toUpperCase()}</span><small class="tag" style="margin:0">0${i+1}</small></div>
+      <p class="tag" style="margin:26px 0 6px">${r.type} · ${r.source}</p>
+      <h2>${r.title}</h2><p>${r.d}</p><strong>Abrir recurso <span aria-hidden="true">↗</span></strong></a>`).join("")}
+  </div>
+  <p style="margin:18px 0 0;color:#5f7989;font-size:11px;text-align:right">Los recursos se abren en una nueva pestaña mediante enlaces externos seguros.</p>`);
+
+pages.ejercicios = () => pageIntro("Recursos y aprendizaje","Ejercicios y casos prácticos",`
+  <p class="topic-intro">Lleva los conceptos a situaciones concretas. Resuelve cada actividad antes de desplegar su pauta de evaluación.</p>
+  ${EXERCISES.map((e,i)=>`<article class="exercise">
+    <div style="display:flex;justify-content:space-between;align-items:center"><p class="tag" style="margin:0">0${i+1} · ${e.type}</p><small style="padding:5px 10px;border-radius:999px;background:var(--sky);color:var(--navy);font-size:10px;font-weight:800">${e.level}</small></div>
+    <h2>${e.title}</h2><p class="prompt">${e.prompt}</p>
+    <button class="btn" data-act="exSol" data-v="${i}" aria-expanded="${S.exercise===i}">${S.exercise===i?"Ocultar solución":"Mostrar solución"} <span>${S.exercise===i?"−":"+"}</span></button>
+    <div class="solution ${S.exercise===i?"open":""}"><strong>Pauta de evaluación</strong>${e.solution}</div>
+  </article>`).join("")}`);
+
+pages["sobre-nosotros"] = () => pageIntro("El equipo","Sobre nosotros",`
+  <p class="topic-intro">Somos un equipo académico unido por una meta: acercar la calidad de software mediante contenidos claros, ejemplos aplicados y experiencias interactivas.</p>
+  <div class="navy-box" style="margin-bottom:40px"><p class="tag">Nuestra motivación</p><h2 class="h2b" style="color:#fff">Aprender calidad construyendo con calidad</h2>
+  <p>Este sitio nació para acompañar a estudiantes y profesionales en formación. Cada decisión combina rigurosidad técnica, lenguaje accesible y una experiencia centrada en las personas.</p></div>
+  <div class="team-grid">${TEAM.map((t,i)=>`<article><div style="display:flex;justify-content:space-between"><span class="avatar">${t.i}</span><small class="tag" style="margin:0">0${i+1}</small></div>
+    <p class="tag" style="margin:30px 0 4px">Integrante 0${i+1}</p><h2>${t.role}</h2><strong style="font-size:12px;color:#4c708b">${t.f}</strong><p style="margin-top:18px">${t.m}</p></article>`).join("")}</div>`);
+
+pages.contacto = () => {
+  const e = S.contactErrors || {}, sent = S.contactSent;
+  const f = (id,label,type,wide,tag) => `<div class="fld ${wide?"wide":""} ${e[id]?"bad":""}"><label for="c-${id}">${label}</label>
+    ${tag==="textarea"?`<textarea id="c-${id}" name="${id}" rows="6"></textarea>`:`<input id="c-${id}" name="${id}" type="${type}">`}
+    ${e[id]?`<span class="err">${e[id]}</span>`:""}</div>`;
+  return pageIntro("Hablemos","Contacto",`
+  <p class="topic-intro">¿Tienes una consulta o quieres compartir una sugerencia? Completa el formulario y revisaremos tu mensaje.</p>
+  <div class="contact-layout">
+    <aside><p class="tag" style="color:#91c9e6">Canal de contacto</p><h2 class="h2b" style="color:#fff">Tu experiencia también mejora este proyecto</h2>
+      <p style="color:#d7e8f1;font-size:14px;line-height:1.7">Usa este espacio para enviar dudas sobre los contenidos, proponer mejoras o contarnos qué recurso te gustaría encontrar.</p>
+      <a href="mailto:hola@gestiondecalidad.com">hola@gestiondecalidad.com</a></aside>
+    <form class="cf" id="contactForm" novalidate>
+      ${sent?`<div class="ok" role="status">Gracias por compartir tu consulta. La información fue validada.</div>`:""}
+      ${f("name","Nombre y apellido","text")}
+      ${f("email","Correo electrónico","email")}
+      ${f("subject","Asunto","text",true)}
+      ${f("message","Mensaje","",true,"textarea")}
+      <button class="btn solid sendbtn" type="submit">Enviar mensaje ${ARROW}</button>
+    </form>
+  </div>`);
+};
+
+/* ---------- ROUTER ---------- */
+const ROUTES = {
+  "": pages.home,
+  "calidad": pages.calidad,
+  "calidad/fundamentos": pages.fundamentos,
+  "calidad/tecnicas": pages.tecnicas,
+  "calidad/herramientas": pages.herramientas,
+  "procesos/ciclo-de-vida": pages.sdlc,
+  "metodologias/scrum": pages.scrum,
+  "metodologias/kanban": pages.kanban,
+  "metodologias/xp": pages.xp,
+  "metodologias/comparador": pages.comparador,
+  "metodologias/encuesta": pages.encuesta,
+  "recursos/glosario": pages.glosario,
+  "recursos/preguntas-frecuentes": pages["preguntas-frecuentes"],
+  "recursos/enlaces": pages.enlaces,
+  "recursos/ejercicios": pages.ejercicios,
+  "sobre-nosotros": pages["sobre-nosotros"],
+  "contacto": pages.contacto
+};
+
+function currentRoute(){ return location.hash.replace(/^#\/?/,"").replace(/\/$/,""); }
+
+function render(){
+  const r = currentRoute();
+  const fn = ROUTES[r] || ROUTES[""];
+  $("#app").innerHTML = fn();
+  document.querySelectorAll("#barra a").forEach(a=>a.classList.toggle("current", a.getAttribute("href")===("#/"+r).replace("#/","#/")));
+  $("#menuNav").querySelectorAll(".menu-group").forEach(g=>{
+    g.classList.toggle("is-active", g.dataset.group===groupOf(r));
+  });
+  if (!/^#\/(sdlc)?/.test(location.hash)) {}
+  window.scrollTo({top:0});
+}
+
+function groupOf(r){
+  if (r==="") return "Inicio";
+  if (r.startsWith("calidad")) return "Calidad";
+  if (r.startsWith("procesos")) return "Procesos";
+  if (r.startsWith("metodologias")) return "Metodologías";
+  if (r.startsWith("recursos")) return "Recursos";
+  if (r==="contacto"||r==="sobre-nosotros") return "Nosotros";
+  return "";
+}
+
+/* ---------- MENÚ Y BARRA ---------- */
+$("#menuNav").innerHTML = MENU.map((m,i)=>`<div class="menu-group" data-group="${m.label}">
+  <button type="button" aria-expanded="false"><span>0${i+1}</span>${m.label}<span class="menu-plus" aria-hidden="true"></span></button>
+  <div class="submenu">${m.options.map(o=>`<a href="${o.href}">${o.label}${ARROW}</a>`).join("")}</div></div>`).join("");
+$("#barra").innerHTML = BAR.map(b=>`<a href="${b[1]}">${b[0]}</a>`).join("");
+
+function setMenu(open){
+  $("#menuPanel").classList.toggle("is-open",open);
+  $("#backdrop").classList.toggle("is-open",open);
+  $("#menuPanel").setAttribute("aria-hidden",!open);
+  const b=$("#btnMenu"); b.classList.toggle("is-open",open); b.setAttribute("aria-expanded",open);
+  document.body.style.overflow = open ? "hidden" : "";
+}
+function setSearch(open){
+  $("#searchPanel").classList.toggle("is-open",open);
+  $("#btnSearch").setAttribute("aria-expanded",open);
+  if (open) $("#siteSearch").focus();
+}
+
+$("#btnMenu").addEventListener("click",()=>{ setSearch(false); setMenu(!$("#menuPanel").classList.contains("is-open")); });
+$("#btnSearch").addEventListener("click",()=>{ setMenu(false); setSearch(!$("#searchPanel").classList.contains("is-open")); });
+$("#backdrop").addEventListener("click",()=>setMenu(false));
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"){ setMenu(false); setSearch(false); } });
+
+document.getElementById("menuNav").addEventListener("click",e=>{
+  const btn = e.target.closest(".menu-group > button");
+  if (btn){ const g=btn.parentElement; const open=!g.classList.contains("is-expanded");
+    document.querySelectorAll(".menu-group").forEach(x=>x.classList.remove("is-expanded"));
+    g.classList.toggle("is-expanded",open); btn.setAttribute("aria-expanded",open); return; }
+  if (e.target.closest(".submenu a")) setMenu(false);
+});
+
+$("#siteSearch").addEventListener("input",e=>{
+  const q = norm(e.target.value.trim());
+  const box = $("#searchResults");
+  if (!q){ box.innerHTML=""; return; }
+  const items = [];
+  MENU.forEach(m=>m.options.forEach(o=>{ if(norm(o.label).includes(q)) items.push(o); }));
+  GLOSSARY.forEach(g=>{ if(norm(g[0]+" "+g[1]).includes(q)) items.push({label:"Glosario: "+g[0], href:"#/recursos/glosario"}); });
+  box.innerHTML = items.slice(0,8).map(i=>`<a href="${i.href}">${i.label}</a>`).join("") || '<span style="font-size:13px">Sin resultados</span>';
+});
+document.getElementById("searchResults").addEventListener("click",()=>setSearch(false));
+
+/* ---------- INTERACCIONES (delegación) ---------- */
+$("#app").addEventListener("click", e=>{
+  const el = e.target.closest("[data-act]");
+  if (!el) return;
+  const act = el.dataset.act, v = el.dataset.v;
+  switch(act){
+    case "std": S.standard=v; break;
+    case "test": S.testOpen = S.testOpen===v ? null : v; break;
+    case "tool": S.toolFilter=v; break;
+    case "sdlc": S.sdlc=+v; break;
+    case "sdlcNav": S.sdlc=Math.min(SDLC.length-1,Math.max(0,S.sdlc+ +v)); break;
+    case "scrumTopic": S.scrumTopic=v; break;
+    case "ev": S.ev=+v; break;
+    case "weeks": S.weeks=+v; break;
+    case "kanbanNav": S.kanban=Math.min(2,Math.max(0,S.kanban+ +v)); break;
+    case "method": S.methods = S.methods.includes(v) ? S.methods.filter(x=>x!==v) : [...S.methods,v]; break;
+    case "surveyAns": S.survey.answers[S.survey.step]=+v; break;
+    case "surveyNav": S.survey.step=Math.min(SURVEY.length,Math.max(0,S.survey.step+ +v)); break;
+    case "surveyReset": S.survey={step:0,answers:[null,null,null,null,null]}; break;
+    case "faq": S.faq = S.faq===+v ? null : +v; break;
+    case "exSol": S.exercise = S.exercise===+v ? null : +v; break;
+  }
+  if (act==="ev" || act==="weeks" || act==="kanbanNav" || act==="sdlcNav" || act==="sdlc" || act==="surveyNav" || act==="surveyAns" || act==="surveyReset" || act==="method" || act==="scrumTopic" || act==="std" || act==="test" || act==="tool" || act==="faq" || act==="exSol") {
+    const scrollY = window.scrollY; render(); window.scrollTo({top:scrollY});
+  }
+});
+
+$("#app").addEventListener("input", e=>{
+  if (e.target.id==="glossSearch"){
+    S.glossQuery = e.target.value;
+    const pos = e.target.selectionStart;
+    render();
+    const inp = $("#glossSearch"); inp.focus(); inp.setSelectionRange(pos,pos);
+  }
+});
+
+$("#app").addEventListener("change", e=>{
+  if (e.target.matches(".picker input")) return;
+});
+
+$("#app").addEventListener("submit", e=>{
+  if (e.target.id!=="contactForm") return;
+  e.preventDefault();
+  const d = Object.fromEntries(new FormData(e.target).entries());
+  const err = {};
+  const name=(d.name||"").trim(), email=(d.email||"").trim(), subject=(d.subject||"").trim(), message=(d.message||"").trim();
+  if(!name) err.name="Ingresa tu nombre.";
+  if(!email) err.email="Ingresa tu correo electrónico."; else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) err.email="Escribe un correo con formato válido.";
+  if(!subject) err.subject="Indica el tema de tu consulta.";
+  if(!message) err.message="Escribe tu consulta o comentario."; else if(message.length<10) err.message="El mensaje debe tener al menos 10 caracteres.";
+  S.contactErrors = err;
+  S.contactSent = Object.keys(err).length===0;
+  render();
+});
+
+window.addEventListener("hashchange",()=>{ setMenu(false); setSearch(false); render(); });
+
+/* ---------- INICIO ---------- */
+render();
+</script>
 </body>
 </html>
